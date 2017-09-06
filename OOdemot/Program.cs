@@ -1,7 +1,9 @@
-﻿using JAMK.IT; //helpottaa meidän tekemien luokkien löytämistä
+﻿//TT0200 Olio-Ohjelmointi viikkotehtävät
+//Paavo Manninen
+using JAMK.IT; //helpottaa meidän tekemien luokkien löytämistä
 using System;
 
-namespace OOdemot
+namespace JAMK.IT
 {
   class Program
   {
