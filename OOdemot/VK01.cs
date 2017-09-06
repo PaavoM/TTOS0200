@@ -8,5 +8,6 @@ namespace JAMK.IT
 {
     class VK01
     {
+       
     }
 }

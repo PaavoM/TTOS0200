@@ -17,7 +17,8 @@ namespace Hello
       //SayHello();
       //ShowNames();
       //staattisen ohjelman kutsuminen toisesta luokasta
-      Hello.Lotto.DrawLotto();
+      //Hello.Lotto.DrawLotto();
+      Hello.BlackJack.mustajaska();
     }
 
     static void ShowNames()
@@ -61,5 +62,6 @@ namespace Hello
       Console.WriteLine("Terve: {0} ikäsi on: {1}", hlo.Nimi, hlo.Ika);
 
     }
+  
   }
 }
