@@ -8,7 +8,7 @@ namespace viikkotehtavat
 {
     class Lab01
     {
-        public static void tehtava01()
+        static void Tehtava01()
         {
             //Tee ohjelma, joka tulostaa käyttäjän antamaa lukua (1, 2 tai 3) vastaavan luvun sanana (yksi, kaksi tai kolme). 
             //Jos käyttäjä syöttää jonkin muun luvun, 
@@ -39,8 +39,7 @@ namespace viikkotehtavat
                 }
             }
         }
-
-        public static void doGrades()
+        public static void DoGrades()
         {
             //Tee ohjelma, jossa annetaan oppilaalle koulunumero seuraavan taulukon mukaan
             //(pistemäärä kysytään ja ohjelma tulostaa numeron):
@@ -84,6 +83,37 @@ namespace viikkotehtavat
                 }
 
             }
+        }
+        public static void AskNum()
+        {
+            //Tee ohjelma, joka kysyy käyttäjältä kolme lukua
+            //ja tulostaa niiden summan ja keskiarvon.
+
+            int numero1;
+            int numero2;
+            int numero3;
+            int summa;
+            int keskiarvo;
+
+            Console.WriteLine("Anna ensinmäinen numero");
+            numero1 = Convert.ToInt32(System.Console.ReadLine());
+
+            Console.WriteLine("Anna toinen numero");
+            numero2 = Convert.ToInt32(System.Console.ReadLine());
+
+            Console.WriteLine("Anna kolmas numero");
+            numero3 = Convert.ToInt32(System.Console.ReadLine());
+
+
+            Console.WriteLine("Syötit numerot:" + " " + numero1 + " " + numero2 + " " + numero3);
+
+            summa = numero1 + numero2 + numero3;
+            keskiarvo = summa / 3;
+
+            Console.WriteLine("Summa: " + summa);
+            Console.WriteLine("Keskiarvo: " + keskiarvo);
+
+
         }
     }
 }

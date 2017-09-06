@@ -10,8 +10,9 @@ namespace viikkotehtavat
     {
         static void Main(string[] args)
         {
-            //Lab01.tehtava01();
-            Lab01.doGrades();
+            //Lab01.Tehtava01();
+            //Lab01.DoGrades();
+            Lab01.AskNum();
         }
     }
 }
