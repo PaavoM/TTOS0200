@@ -10,7 +10,8 @@ namespace viikkotehtavat
     {
         static void Main(string[] args)
         {
-            viikkotehtava1.tehtava01();
+            //viikkotehtava1.tehtava01();
+            viikkotehtava2.doGrades();
         }
     }
 }
