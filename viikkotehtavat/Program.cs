@@ -12,7 +12,10 @@ namespace viikkotehtavat
         {
             //Lab01.Tehtava01();
             //Lab01.DoGrades();
-            Lab01.AskNum();
+            //Lab01.AskNum();
+            //Lab01.AskAge();
+            //Lab01.GetTime();
+            Lab01.CalcGas();
         }
     }
 }

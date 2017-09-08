@@ -115,6 +115,74 @@ namespace viikkotehtavat
 
 
         }
+        public static void AskAge()
+        {
+            //Tee ohjelma, jossa kysytään käyttäjältä tämän ikä. 
+            //Jos ikä on alle 18 vuotta, tulosta "alaikäinen", 
+            //jos se on 18-65 vuotta, tulosta "aikuinen", 
+            //muussa tapauksessa tulosta "seniori".
+
+            int ikä;
+            Console.WriteLine("Anna ikä");
+            ikä = Convert.ToInt32(System.Console.ReadLine());
+
+           if (ikä < 18)
+            {
+                Console.WriteLine("Alaikäinen");
+            }
+           if (ikä > 18 && ikä < 65)
+            {
+                Console.WriteLine("Aikuinen");
+            }
+            if (ikä > 65)
+            {
+                Console.WriteLine("Seniori");
+            }
+        }
+        public static void GetTime()
+        {
+            //Tee ohjelma, joka näyttää annetun sekuntimäärän tunteina, minuutteina ja sekunteina. 
+            //Aikamääre sekuntteina kysytään käyttäjältä.
+
+            int sekunti;
+            int minuutti;
+            int tunti;
+
+            int jjminuutti;
+            int jjtunti;
+
+
+            Console.WriteLine("Anna sekunnit");
+            sekunti = Convert.ToInt32(System.Console.ReadLine());
+
+
+            minuutti = sekunti / 60;
+            tunti = minuutti / 60;
+
+            jjminuutti = sekunti % 60;
+            jjtunti = minuutti % 60;
+    
+            Console.WriteLine("Antamasi sekunnit voidaan esittää muodossa: " + tunti + " tuntia " + jjtunti + " minuuttia " + jjminuutti + " sekuntia " );
+        }
+        public static void CalcGas()
+        {
+            double matka;
+            double kulutus = 7.02;
+            double bensa = 1.595;
+            double kokonaiskulutus;
+            double hinta;
+
+            Console.WriteLine("Anna matka kilometreissä");
+            matka = int.Parse(System.Console.ReadLine());
+
+            kokonaiskulutus = (matka / 100) * kulutus;
+            hinta = kokonaiskulutus * bensa;
+
+            Console.WriteLine("Bensaa kuluu " + kokonaiskulutus + "litraa, " + "kustannus " + hinta + " euroa.");
+
+           
+            
+        }
     }
 }
 
