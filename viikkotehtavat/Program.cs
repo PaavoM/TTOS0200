@@ -10,12 +10,20 @@ namespace viikkotehtavat
     {
         static void Main(string[] args)
         {
-            //Lab01.Tehtava01();
-            //Lab01.DoGrades();
-            //Lab01.AskNum();
-            //Lab01.AskAge();
-            //Lab01.GetTime();
-            Lab01.CalcGas();
+            //Lab01.Tehtava01();    //1
+            //Lab01.DoGrades();     //2
+            //Lab01.AskNum();       //3
+            //Lab01.AskAge();       //4
+            //Lab01.GetTime();      //5
+            //Lab01.CalcGas();      //6
+            //Lab01.CalcLeapYear(); //7
+            //Lab01.AskThreeNums(); //8
+            //Lab01.AskNumSumm();   //9
+            //Lab01.PrintHep();     //10
+            //Lab01.DoFor();        //11
+            //Lab01.AskFiveNums();  //12    
+            //Lab01.JumpHill();     //13
+            //Lab01.CalcDistribution(); //14
         }
     }
 }
