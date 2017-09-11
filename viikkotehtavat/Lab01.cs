@@ -8,7 +8,7 @@ namespace viikkotehtavat
 {
     class Lab01
     {
-        static void Tehtava01()
+        public static void Tehtava01()
         {
             //Tee ohjelma, joka tulostaa käyttäjän antamaa lukua (1, 2 tai 3) vastaavan luvun sanana (yksi, kaksi tai kolme). 
             //Jos käyttäjä syöttää jonkin muun luvun, 
@@ -323,6 +323,8 @@ namespace viikkotehtavat
         }
         public static void AskFiveNums()
         {
+            //Tee ohjelma, joka kysyy käyttäjältä 5 kokonaislukua. Luvut tulee sijoittaa taulukkoon. 
+            //Ohjelman tulee tulostaa annetut luvut käänteisessä järjestyksessä.
             int[] luvut = new int[5];
 
             for (int i = 0; i < 5; i++)
@@ -346,6 +348,10 @@ namespace viikkotehtavat
             {
                 Console.WriteLine("Anna luku");
                 luvut[i] = int.Parse(System.Console.ReadLine());
+            }
+            for (int i = 0; i < luvut.Length; i++)
+            {
+                Console.Write(luvut[i]);
             }
             Array.Sort(luvut);
             summa = luvut[1] + luvut[2] + luvut[3];
@@ -457,6 +463,95 @@ namespace viikkotehtavat
                 Console.Write("*");
             }
             Console.Write("\n");
+        }
+        public static void CalcRandomNum()
+        {
+            //Tee ohjelma, joka arpoo satunnaisluvun väliltä 0-100. 
+            //Käytä C#:n Random -luokkaa. 
+            //Tämän jälkeen ohjelman käyttäjää kehoitetaan arvaaman arvottu luku. 
+            //Ohjelman tulee antaa vihje arvauksen jälkeen onko arvottu luku pienemäi vai suurempi. 
+            //Tämän jälkeen vihjeitä toistetaan kunnes käyttäjä arvaa oikean luvun. 
+            //Tulosta lopuksi arvausten määrä näytölle.
+
+            Random r = new Random();
+
+            int numero = (r.Next(0, 101));
+            int luku;
+            int i=1;
+            while (true)
+            {
+                Console.Write("Arvaa numero > ");
+                luku = int.Parse(System.Console.ReadLine());
+                if (luku == numero)
+                {
+                    Console.WriteLine("Arvasit numeron! Arvasit " + i + " kertaa.");
+                    
+                    break;
+                }
+                else if (luku != numero)
+                {
+                    if (luku > numero)
+                    {
+                        Console.WriteLine("Luku pienempi");
+                        i++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Luku on suurempi");
+                        i++;
+                    }
+                }
+            }
+        }
+        public static void DoThreeTables()
+        {
+            //Tee ohjelma, joka lajittelee kahdessa kokonaislukutaulukossa olevat alkiot suurusjärjestykseen kolmanteen kokonaislukutaulukkoon. 
+            //Tulosta lopuksi lajitellun taulukon sisältö.
+
+            int[] luvut = new int[] { 10, 20, 30, 40, 50 };
+            int[] luvut2 = new int[] { 5, 15, 25, 35, 45 };
+            int[] luvut3 = new int[10];
+
+            Console.WriteLine("Luvut taulukossa 1 : ");
+            for (int i = 0; i < luvut.Length; i++) Console.Write(" " + luvut[i] + " ");
+            Console.Write("\n");
+            Console.WriteLine("Luvut taulukossa 2 : ");
+            for (int i = 0; i < luvut2.Length; i++) Console.Write(" " + luvut2[i] + " ");
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Luvut taulukossa 3 : ");
+            for (int i = 0; i < luvut3.Length; i++)
+            {
+
+            }
+        }
+        public static void CheckPalindrom()
+        {
+            //Tee ohjelma, joka kysyy käyttäjältä merkkijonon (lause). 
+            //Sovelluksen tulee ilmoittaa käyttäjälle oliko annettu merkkijono palidromi.
+            string sana ;
+            Console.WriteLine("Anna sana");
+            sana = Console.ReadLine();
+
+            char[] array = sana.ToCharArray(); //muutetaan annettu sana taulukoksi
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                char letter = array[i]; //laitetaan jokainen kirjain yhteen taulukon paikkaan
+            }
+
+            Array.Reverse(array); //käännetään taulukko ympäri
+
+            string käännetty = new string(array); //muutetaan taulukko takaisin käännetty stringiksi
+
+            if (sana == käännetty) //ja loppu on helppo vertailu
+            {
+                Console.WriteLine("Palindromi");
+            }
+            else
+            {
+                Console.WriteLine("Ei palindromi");
+            }
         }
 
     }

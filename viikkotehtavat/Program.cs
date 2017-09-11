@@ -24,6 +24,10 @@ namespace viikkotehtavat
             //Lab01.AskFiveNums();  //12    
             //Lab01.JumpHill();     //13
             //Lab01.CalcDistribution(); //14
+            //Lab01.CalcRandomNum(); //16
+            //Lab01.DoThreeTables(); //17 keskeneräinen
+            //Lab01.CheckPalindrom(); //18
+            
         }
     }
 }
