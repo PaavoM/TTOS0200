@@ -27,6 +27,7 @@ namespace viikkotehtavat
             //Lab01.CalcRandomNum(); //16
             //Lab01.DoThreeTables(); //17 keskeneräinen
             //Lab01.CheckPalindrom(); //18
+            Lab01.calculator(); //20
             
         }
     }

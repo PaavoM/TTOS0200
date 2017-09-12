@@ -553,6 +553,57 @@ namespace viikkotehtavat
                 Console.WriteLine("Ei palindromi");
             }
         }
+        public static void calculator()
+        {
+            int luku1;
+            int luku2;
+            int summa;
+            int erotus;
+            int osamäärä;
+            int tulo;
+            int jakojäännös;
+            Console.WriteLine("Tervetuloa laskimeen, syötä kaksi lukua.");
+            Console.WriteLine("Anna luku");
+            luku1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Anna luku");
+            luku2 = int.Parse(Console.ReadLine());
+
+            Console.Write("====VALIKKO====" + "\n" + "===============" + "\n\n" + "1. Summa       " + "\n" + "2. Erotus      " + "\n" + "3. Tulo        " + "\n" + "4. Osamaara    \n" + "5. Jakojaannos    " + "\n\n");
+
+            Console.WriteLine("Valitse toiminto");
+           int valinta = int.Parse(Console.ReadLine());
+
+            switch (valinta)
+            {
+                case 1:
+                    Console.WriteLine("Valitsit summan");
+                    summa = luku1 + luku2;
+                    Console.WriteLine("Vastaus: " + summa);
+                    break;
+                case 2:
+                    Console.WriteLine("Valitsit erotuksen");
+                    erotus = luku1 - luku2;
+                    Console.WriteLine("Vastaus: " + erotus);
+                    break;
+                case 3:
+                    Console.WriteLine("Valitsit tulon");
+                    tulo = luku1 * luku2;
+                    Console.WriteLine("Vastaus: " + tulo);
+                    break;
+                case 4:
+                    Console.WriteLine("Valitsit osamäärän");
+                    osamäärä = luku1 / luku2;
+                    Console.WriteLine("Vastaus: " + osamäärä);
+                    break;
+                case 5:
+                    Console.WriteLine("Valitsit jakojäännöksen");
+                    jakojäännös = luku1 % luku2;
+                    Console.WriteLine("Vastaus: " + jakojäännös);
+                    break;
+
+            }
+        }
 
     }
 }
