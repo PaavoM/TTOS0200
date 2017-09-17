@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace viikkotehtavat
+namespace JAMK.IT
 {
     class Program
     {
@@ -27,8 +27,47 @@ namespace viikkotehtavat
             //Lab01.CalcRandomNum(); //16
             //Lab01.DoThreeTables(); //17 keskeneräinen
             //Lab01.CheckPalindrom(); //18
-            Lab01.calculator(); //20
+            //Lab01.calculator(); //20
+            //TestaaKiuas();
+            TestaaPesukone();
             
+        }
+        static void TestaaKiuas()
+        {
+            Kiuas uusiKiuas = new Kiuas();
+
+            Console.WriteLine("Onko kiuas päällä/kiinni? (vastaa joko päällä tai kiinni");
+            uusiKiuas.Tila = Console.ReadLine();
+            uusiKiuas.GetTila();
+
+            Console.WriteLine("Säädä lämpötila");
+            uusiKiuas.Lämpötila = int.Parse(Console.ReadLine());
+            uusiKiuas.GetLämpötila();
+
+            Console.WriteLine("Heitä x määrä löylyä");
+            uusiKiuas.Kosteus = int.Parse(Console.ReadLine());
+            uusiKiuas.GetKosteus();
+        }
+        static void TestaaPesukone()
+        {
+            Pesukone uusipesukone = new Pesukone();
+
+            Console.WriteLine("Laita pesukone päälle syöttämällä 'päällä' ");
+            uusipesukone.Tila = Console.ReadLine();
+            uusipesukone.GetTila();
+
+            Console.WriteLine("Valitse ohjelma: Käsipesu, arkipesu vai megapesu");
+            uusipesukone.PesuOhjelma = Console.ReadLine();
+            uusipesukone.GetOhjelma();
+
+            Console.WriteLine("Valitse veden lämpötila. 30/40/60");
+            uusipesukone.VedenLämpötila = int.Parse(Console.ReadLine());
+            uusipesukone.GetLämpötila();
+
+            Console.WriteLine("Valitse linkousnopeus. 400 / 1000 / 1400");
+            uusipesukone.LinkousNopeus = int.Parse(Console.ReadLine());
+            uusipesukone.GetLinkous();
+
         }
     }
 }
