@@ -29,7 +29,9 @@ namespace JAMK.IT
             //Lab01.CheckPalindrom(); //18
             //Lab01.calculator(); //20
             //TestaaKiuas();
-            TestaaPesukone();
+            //TestaaPesukone();
+            //TestaaTelevisio();
+            TestaaKulkuneuvo();
             
         }
         static void TestaaKiuas()
@@ -68,6 +70,33 @@ namespace JAMK.IT
             uusipesukone.LinkousNopeus = int.Parse(Console.ReadLine());
             uusipesukone.GetLinkous();
 
+        }
+        static void TestaaTelevisio()
+        {
+            Televisio uusiTelevisio = new Televisio();
+
+            Console.WriteLine("Käynnistä televsisio syöttämällä 'päällä' ");
+            uusiTelevisio.Tila = Console.ReadLine();
+            uusiTelevisio.GetTila();
+
+            Console.WriteLine("Valitse kanava");
+            uusiTelevisio.Kanava = int.Parse(Console.ReadLine());
+            uusiTelevisio.VaihdaKanavaa();
+
+
+            Console.WriteLine("Säädä volyymiä");
+            uusiTelevisio.Volyymi = int.Parse(Console.ReadLine());
+            uusiTelevisio.SäädäVolyymi();
+        }
+        static void TestaaKulkuneuvo()
+        {
+            vechile uusiVechile = new vechile();
+
+
+            uusiVechile.Name = "Mersu";
+            uusiVechile.Speed = 320;
+            uusiVechile.Tyres = 4;
+            uusiVechile.PrintData();
         }
     }
 }
