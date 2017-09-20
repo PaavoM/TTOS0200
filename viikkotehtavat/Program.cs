@@ -31,7 +31,7 @@ namespace JAMK.IT
             //TestaaKiuas();
             //TestaaPesukone();
             //TestaaTelevisio();
-            TestaaKulkuneuvo();
+            //TestaaKulkuneuvo();
             
         }
         static void TestaaKiuas()
