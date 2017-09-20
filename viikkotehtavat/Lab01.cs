@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace viikkotehtavat
+namespace JAMK.IT
 {
     class Lab01
     {
