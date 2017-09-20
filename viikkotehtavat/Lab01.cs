@@ -166,7 +166,7 @@ namespace viikkotehtavat
         }
         public static void CalcGas()
         {
-            double matka;
+            int matka;
             double kulutus = 7.02;
             double bensa = 1.595;
             double kokonaiskulutus;
