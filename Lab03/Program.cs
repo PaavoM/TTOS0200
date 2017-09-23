@@ -10,16 +10,21 @@ namespace Lab03
     {
         static void Main(string[] args)
         {
-            testaaLuku();
+            TestaaLuku();
+            TestaaPvm();
         }
 
-        static void testaaLuku()
+        static void TestaaLuku()
         {
             Console.WriteLine("Anna testattava teksti");
             string teksti = Console.ReadLine();
             Luku.OnkoLuku(teksti);
-
-
+        }
+        static void TestaaPvm()
+        {
+            Console.WriteLine("Anna testattava päivämäärä");
+            string paivamaara = Console.ReadLine();
+            Luku.OnkoPvm(paivamaara);
         }
     }
 }

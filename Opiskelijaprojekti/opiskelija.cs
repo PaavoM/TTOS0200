@@ -13,5 +13,6 @@ namespace Opiskelijaprojekti
         public string OpiskelijaTunnus { get; set; }
         public int PuhelinNumero { get; set; }
         public string Sähkoposti { get; set; }
+
     }
 }

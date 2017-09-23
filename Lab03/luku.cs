@@ -12,21 +12,33 @@ namespace Lab03
 
         public static bool OnkoLuku(string syote)
         {
-            if (syote == "testi")
+            if (syote.All(char.IsDigit) || syote.ToLower().Contains(','))
             {
-                Console.WriteLine("hyvä impde");
+                Console.WriteLine("On luku");
                 return true;
             }
             else
             {
+                Console.WriteLine("Ei ole luku");
                 return false;
             }
             
         }
         public static bool OnkoPvm(string syote)
         {
-            
-            return false;
+            string[] format = new string[] { "dd.MM.yyyy" };
+            DateTime dateTime;
+
+            if (DateTime.TryParseExact(syote, format, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.NoCurrentDateDefault, out dateTime))
+            {
+                Console.WriteLine("On päivämäärä");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Ei ole päivämäärä");
+                return false;
+            }
         }
 
 
