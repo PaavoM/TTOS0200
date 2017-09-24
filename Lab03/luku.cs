@@ -8,8 +8,6 @@ namespace Lab03
 {
    public static class Luku
     {
- 
-
         public static bool OnkoLuku(string syote)
         {
             if (syote.All(char.IsDigit) || syote.ToLower().Contains(','))
@@ -22,7 +20,6 @@ namespace Lab03
                 Console.WriteLine("Ei ole luku");
                 return false;
             }
-            
         }
         public static bool OnkoPvm(string syote)
         {
@@ -40,7 +37,5 @@ namespace Lab03
                 return false;
             }
         }
-
-
     }
 }
