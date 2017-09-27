@@ -21,7 +21,7 @@ namespace JAMK.IT
             {
                 Console.WriteLine("Anna kerros >");
                 hissi.Kerros = int.Parse(Console.ReadLine());
-                Console.WriteLine("Hissi on nyt kerroksessa> " + hissi.kerros);
+                Console.WriteLine("Hissi on nyt kerroksessa> " + hissi.Kerros);
             }
         }
     }

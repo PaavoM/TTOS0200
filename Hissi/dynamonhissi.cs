@@ -11,7 +11,7 @@ namespace JAMK.IT
         private readonly int Maxkerros = 5;
         private readonly int Minkerros = 1;
 
-        public int kerros=1;
+        private int kerros=1;
         public int Kerros
         {
             get

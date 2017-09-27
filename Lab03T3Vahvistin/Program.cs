@@ -15,15 +15,19 @@ namespace Lab03T3Vahvistin
         static void GetVolume()
         {
             Vahvistin uusivahvistin = new Vahvistin();
-
             while (true)
             {
-                Console.WriteLine("Anna voluumi 0-100 >");
-                uusivahvistin.Volume = int.Parse(Console.ReadLine());
-                Console.WriteLine("Volume:> " + uusivahvistin.Volume);
+                Console.WriteLine("Anna volumi");
+                if (uusivahvistin.SäädäÄänenvoimakkuutta(int.Parse(Console.ReadLine())))
+                {
+                    Console.WriteLine("Volumit " + uusivahvistin.Volume);
+                }
+                else
+                {
+                    Console.WriteLine("Ei onnistu");
+                    Console.WriteLine(uusivahvistin.Volume);
+                }
             }
         }
-
-
     }
 }

@@ -11,8 +11,21 @@ namespace Lab03T3Vahvistin
         private readonly int Maxvolume = 100;
         private readonly int Minvolume = 0;
 
-        public int volume;
-        public int Volume
+        private int volume;
+        public bool SäädäÄänenvoimakkuutta(int arvo)
+        {
+            if (arvo <= Maxvolume && arvo >= Minvolume)
+            {
+                volume = arvo;
+                return true;
+            }
+            else 
+            {
+                return false;
+            }
+        }
+        //public int Volume { get ; set; }
+       public int Volume
         {
             get
             {
@@ -20,18 +33,9 @@ namespace Lab03T3Vahvistin
             }
             set
             {
-                if (value <= Maxvolume && value >= Minvolume) volume = value;
-                else if (value > Maxvolume)
-                {
-                    Console.WriteLine("Ikkunat paukkuu, laita hiljemmallee :D");
-                    volume = Maxvolume;
-                }
-               else if (value < Minvolume)
-                {
-                    Console.WriteLine("Ootko mies vai hiiri? Laita kovemmallee :D");
-                    volume = Minvolume;
-                }
+
             }
+
         }
     }
 }
