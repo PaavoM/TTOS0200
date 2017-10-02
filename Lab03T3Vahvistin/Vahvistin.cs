@@ -19,14 +19,14 @@ namespace Lab03T3Vahvistin
                 volume = arvo;
                 return true;
             }
-            else 
+            else
             {
                 return false;
             }
         }
         //public int Volume { get ; set; }
-       public int Volume
-        {
+        public int Volume
+        { 
             get
             {
                 return volume;
@@ -35,7 +35,6 @@ namespace Lab03T3Vahvistin
             {
 
             }
-
         }
     }
 }
