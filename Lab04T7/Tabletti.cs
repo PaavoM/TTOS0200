@@ -27,7 +27,7 @@ namespace Lab04T7
         }
         public override string ToString()
         {
-            return "Esine: " + Nimi + "\n" + "Mistä saatu? " + Saatu + "\n" + "Laitteen tyyppi: " + Tyyppi + "\n" + "Käyttöjärjestelmä: "
+            return "Laite: " + Nimi + "\n" + "Mistä saatu? " + Saatu + "\n" + "Laitteen tyyppi: " + Tyyppi + "\n" + "Käyttöjärjestelmä: "
                 + Käyttöjärjestelmä + "\n" + "Valmistaja: " + Valmistaja + "\n" + "Näytön koko: " + Näyttö + "\n" + "Kamerat: " + Kamerat + "\n";
         }
     }

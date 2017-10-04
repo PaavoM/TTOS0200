@@ -26,7 +26,8 @@ namespace Lab04T5
         }
         public override string ToString()
         {
-            return "Bike info" + "\n" + "Nimi : " + Nimi + " " + "Malli: " + Malli + " " + "Vuosimalli: " + Vuosimalli + " " + "Väri: " + Väri + " " + "Vaihdetyyppi: " + Vaihdetyyppi + " " + "Vaihdemalli: " + Vaihdemalli + "\n";
+            return "Bike info" + "\n" + "Nimi : " + Nimi + " " + "Malli: " + Malli + " " + "Vuosimalli: " + Vuosimalli + " " 
+                + "Väri: " + Väri + " " + "Vaihdetyyppi: " + Vaihdetyyppi + " " + "Vaihdemalli: " + Vaihdemalli + "\n";
         }
     }
 }

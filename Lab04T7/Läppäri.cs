@@ -32,7 +32,7 @@ namespace Lab04T7
         }
         public override string ToString()
         {
-            return "Esine: " + Nimi + "\n" + "Mistä saatu? " + Saatu + "\n" + "Laitteen tyyppi: " + Tyyppi + "\n" + "Käyttöjärjestelmä: "
+            return "Laite: " + Nimi + "\n" + "Mistä saatu? " + Saatu + "\n" + "Laitteen tyyppi: " + Tyyppi + "\n" + "Käyttöjärjestelmä: "
                 + Käyttöjärjestelmä + "\n" + "Valmistaja: " + Valmistaja + "\n" + "Prosessori: " + Prosessori + "\n" + "Ram: " + Ram + "Gb" + "\n" + "Massamuisti: " + Massamuisti + "Gb"
                 + "\n" + "Akunkesto: " + Akunkesto + "h" + "\n";
         }
