@@ -62,20 +62,12 @@ namespace Lab04T6
             {
                 return volume;
             }
-            set
-            {
-
-            }
         }
         public double Frequency
         {
             get
             {
                 return frequency;
-            }
-            set
-            {
-
             }
         }
 
