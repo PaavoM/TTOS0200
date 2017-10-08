@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello", "Hello\Hello.csproj", "{43D3A9D9-D831-46CD-BE33-1DE6770DB406}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab04T7", "Lab04T7\Lab04T7.csproj", "{5121F5FE-E548-4E59-B0C1-CCC16D244260}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheThing", "TheThing\TheThing.csproj", "{CAB0F62B-A253-4360-AC23-E655C1251960}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab05T1", "Lab05T1\Lab05T1.csproj", "{75AC3C94-A035-4975-A922-BBFED9CAF89F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{CAB0F62B-A253-4360-AC23-E655C1251960}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAB0F62B-A253-4360-AC23-E655C1251960}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAB0F62B-A253-4360-AC23-E655C1251960}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75AC3C94-A035-4975-A922-BBFED9CAF89F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75AC3C94-A035-4975-A922-BBFED9CAF89F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75AC3C94-A035-4975-A922-BBFED9CAF89F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75AC3C94-A035-4975-A922-BBFED9CAF89F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
