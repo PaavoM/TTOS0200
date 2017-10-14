@@ -8,48 +8,53 @@ namespace Lab07T1
 {
     class TestaaMiniASIO
     {
-        static void Testaa()
+        static void Main(string[] args)
         {
-            //luodaan List-tyyppinen lista opiskelijoista
+            // create a list for opiskelijat
             List<Opiskelija> opiskelijat = new List<Opiskelija>();
-            //Testin vuokdi erilaisia tapoja lisätä oliota listaan
-            Opiskelija masa = new Opiskelija("Masa", "Niemi");
-            opiskelijat.Add(masa);
-            opiskelijat.Add(new Opiskelija("Allan", "Aalto", "A1234"));
-            //myös näin
-            opiskelijat.Add(new Opiskelija { Etunimi = "Hanna", Sukunimi = "Husso", AsioID = "H5678" });
-            opiskelijat.Add(new Opiskelija { Etunimi = "Teppo", Sukunimi = "Testaaaja", AsioID = "T5678", Ryhmä = "TTV16S6" });
-            Opiskelija kalle = new Opiskelija();
-            kalle.Etunimi = "Kalle"; kalle.Sukunimi = "Ankka"; kalle.AsioID = "k6666";
-            opiskelijat.Add(kalle);
-            //yhden opiskelijan tietoejen näyttäminen
-            Console.WriteLine("Anna numero väliltä 1-{0}", opiskelijat.Count);
-            int i = int.Parse(Console.ReadLine());
-            if (i -1 < opiskelijat.Count)
-                Console.WriteLine("Miniasion {0} opiskelija on {1}", i, opiskelijat[i - 1].ToString());
-            else
-                Console.WriteLine("Miniasiossa on vain {0} opiskelijaa", opiskelijat.Count);
-            Console.WriteLine("Miniasion kaikki opiskelijat: ");
-            foreach (var o in opiskelijat)
+
+            // add some test students different way to the list
+            Opiskelija oo = new Opiskelija("Masa", "Niemi");
+            opiskelijat.Add(oo);
+            opiskelijat.Add(new Opiskelija("Allan", "Aalto", "A1111"));
+            //myÃ¶s nÃ¤in
+            opiskelijat.Add(new Opiskelija { Etunimi = "Hanna", Sukunimi = "Husso", AsioID = "B2222" });
+            opiskelijat.Add(new Opiskelija { Etunimi = "Teppo", Sukunimi = "Testaaja", AsioID = "C3333", Ryhmä = "TTV17S1" });
+
+            // show one Opiskelija data
+            Console.WriteLine("The First Opiskelija in the MiniASIO is:");
+            Console.WriteLine(opiskelijat.ElementAt(0).ToString());
+
+            // show one Opiskelija data
+            Console.WriteLine("The Last Opiskelija in the MiniASIO is:");
+            int lkm = opiskelijat.Count;
+            Console.WriteLine(opiskelijat[lkm - 1]);
+
+            // loop through all the opiskelijat
+            Console.WriteLine();
+            Console.WriteLine("The all students in MiniASIO:");
+            foreach (Opiskelija o in opiskelijat)
             {
                 Console.WriteLine(o.ToString());
             }
-            //Kaikkien opiskelijoitten tiedot aakkosjärjestyksessä sukunimen mukaa
-            //sprtataan oliot sukunimi-ominaisuuden mukaiseen järjestykseen
-            opiskelijat.Sort((x,y) => x.Sukunimi.CompareTo(y.Sukunimi));
-            Console.WriteLine("Miniasion kaikki opiskelijat: ");
-            foreach (var o in opiskelijat)
+            // sort by Sukunimi
+            opiskelijat.Sort((x, y) => x.Sukunimi.CompareTo(y.Sukunimi));
+            Console.WriteLine();
+            Console.WriteLine("The all students in alphabetical order in MiniASIO::");
+            foreach (Opiskelija o in opiskelijat)
             {
                 Console.WriteLine(o.ToString());
             }
-            //uuden opiskelijan lisääminen, huom tehthään tarkistus ettei asioID ole jo olemassa
-            Console.WriteLine("Anna uuden opiskelijan AsioID");
-            string asioid = Console.ReadLine();
+            //uuden opiskelijat lisÃ¤Ã¤minen
+            //tarkistetaan AsioID
+            Console.WriteLine("Please, give data of a new Opiskelija:");
+            Console.WriteLine("AsioID:");
+            string ai = Console.ReadLine();
             //tutkitaan onko listassa
             bool lippu = false;
             foreach (Opiskelija o in opiskelijat)
             {
-                if (asioid == o.AsioID)
+                if (o.AsioID == ai)
                 {
                     lippu = true;
                     break;
@@ -57,29 +62,30 @@ namespace Lab07T1
             }
             if (lippu)
             {
-                Console.WriteLine("AsioUD {0} on jo käytössä", asioid);
+                Console.WriteLine("AsioID {0} on jo kÃ¤ytÃ¶ssÃ¤, tietoja ei voi lisÃ¤tÃ¤.", ai);
             }
             else
             {
-                Console.WriteLine("Anna uuden opiskelijan etunimi");
-                string etunimi = Console.ReadLine();
-                Console.WriteLine("Anna uuden opiskelijan sukunimi");
-                string sukunimi = Console.ReadLine();
-                Console.WriteLine("Anna uuden opiskelijan ryhmä");
-                string ryhmä = Console.ReadLine();
-                //luodaan uusi opiskelija olio
-                Opiskelija uusi = new Opiskelija(etunimi, sukunimi, asioid, ryhmä);
+                Console.WriteLine("Etunimi:");
+                string en = Console.ReadLine();
+                Console.WriteLine("Sukunimi:");
+                string sn = Console.ReadLine();
+                Console.WriteLine("Ryhmä:");
+                string ry = Console.ReadLine();
+                //luodaan uusi olio
+                Opiskelija uusi = new Opiskelija(en, sn, ai, ry);
                 opiskelijat.Add(uusi);
-                Console.WriteLine("Miniasion kaikki {0} opiskelijaa: ", opiskelijat.Count);
-                foreach (var o in opiskelijat)
+                Console.WriteLine("The all students in MiniASIO:");
+                foreach (Opiskelija o in opiskelijat)
                 {
                     Console.WriteLine(o.ToString());
                 }
             }
-        }
-        static void Main(string[] args)
-        {
-            Testaa();
+            // read line to keep output windows visible
+            Console.WriteLine();
+            Console.WriteLine("Press enter key to continue...");
+            Console.ReadLine();
         }
     }
 }
+
