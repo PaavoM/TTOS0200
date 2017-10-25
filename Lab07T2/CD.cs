@@ -10,7 +10,6 @@ namespace Lab07T2
     {
         public string Nimi { get; set; }
         public string Artisti { get; set; }
-        public string Songs { get; set; }
         public List<Songs> Biisit;
 
         public CD()
@@ -32,6 +31,7 @@ namespace Lab07T2
             Biisit.Add(new Songs("14. Don't Make a Sound – 5.39"));
             Biisit.Add(new Songs("15. Ruokaa, ei aseita – 4.30"));
             Biisit.Add(new Songs("16. 5 päivää, 5 yötä – 4.34"));
+            new Songs();
         }
         
         public override string ToString()
