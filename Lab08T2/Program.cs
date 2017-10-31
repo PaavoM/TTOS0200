@@ -25,7 +25,7 @@ namespace Lab08T2
                     {
                         a++;
                     }
-                    var nameCount = new Dictionary<string, int>();
+                    var nameCount = new SortedDictionary<string, int>();
                     foreach (String s in File.ReadAllLines(filupath))
                     {
                         if (nameCount.ContainsKey(s))

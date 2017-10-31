@@ -36,10 +36,7 @@ namespace Lab08T1._0
                     Console.WriteLine(teksti);
                 }
             }
-            catch (FileNotFoundException ex)
-            {
-                Console.WriteLine("Tiedostoa ei löydy!");
-            }
+
             catch (Exception ex)
             {
 
