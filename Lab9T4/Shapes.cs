@@ -48,7 +48,7 @@ namespace Lab9T4
             string retval = "";
             foreach (Shape item in Kuviot)
             {
-                retval += Name + " " + d + " " + item.ToString() + "\n";
+                retval += Name + "nr." + d + " " + item.ToString() + "\n";
                 d++;
             }
             return retval;
