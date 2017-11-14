@@ -7,20 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <ComboBox x:Name="dropBox1" HorizontalAlignment="Left" Margin="20,121,0,0" VerticalAlignment="Top" Width="120">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="370*"/>
+            <ColumnDefinition Width="147*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox x:Name="dropBox1" HorizontalAlignment="Left" Margin="0,121,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="dropBox1_SelectionChanged">
             <ListBoxItem x:Name="usd1" Content="Yhdysvallat USD"/>
             <ListBoxItem x:Name="eur1" Content="Suomi EUR"/>
         </ComboBox>
-        <TextBox x:Name="txtBox1" HorizontalAlignment="Left" Height="23" Margin="140,121,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="90" TextChanged="txtBox1_TextChanged"/>
-        <TextBlock x:Name="txtBlock1" HorizontalAlignment="Left" Margin="140,149,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <ComboBox x:Name="dropBox2" HorizontalAlignment="Left" Margin="276,121,0,0" VerticalAlignment="Top" Width="120">
-            <ListBoxItem x:Name="usd2" Content="Yhdysvallat USD"/>
-            <ListBoxItem x:Name="eur2" Content="Suomi EUR"/>
-        </ComboBox>
-        <TextBox x:Name="txtBox2" HorizontalAlignment="Left" Height="23" Margin="401,120,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="90"/>
-        <TextBlock x:Name="txtBlock2" HorizontalAlignment="Left" Margin="401,148,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBox1" HorizontalAlignment="Left" Height="23" Margin="140,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90" TextChanged="txtBox1_TextChanged"/>
+        <TextBlock x:Name="txtBlock1" HorizontalAlignment="Left" Margin="125,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBox2" HorizontalAlignment="Left" Height="23" Margin="31.244,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="90" Grid.Column="1"/>
+        <TextBlock x:Name="txtBlock2" HorizontalAlignment="Left" Margin="31.244,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.Column="1"/>
         <Label Content="Ostan" HorizontalAlignment="Left" Margin="20,83,0,0" VerticalAlignment="Top"/>
         <Label Content="Maksan" HorizontalAlignment="Left" Margin="276,83,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txtBlock3" HorizontalAlignment="Left" Margin="256,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="22" Width="120" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="txtBlock4" HorizontalAlignment="Left" Margin="113,170,0,0" TextWrapping="Wrap" Text="So far so good" VerticalAlignment="Top"/>
+        <Label Content="Virheet: " HorizontalAlignment="Left" Margin="63,165,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
